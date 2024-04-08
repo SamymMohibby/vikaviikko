@@ -13,7 +13,7 @@ public class GroceryListAdapter extends RecyclerView.Adapter<GroceryViewHolder> 
     private List<Grocery> groceryList = new ArrayList<>();
 
     public GroceryListAdapter() {
-        this.groceryList = groceryList;
+        groceryList = ListGrocery.getInstance().getGroceries();
     }
 
     @Override

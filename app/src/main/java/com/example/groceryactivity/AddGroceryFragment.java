@@ -28,6 +28,7 @@ public class AddGroceryFragment extends Fragment {
     }
 
 
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -58,7 +59,7 @@ public class AddGroceryFragment extends Fragment {
                 viewModel.addImportantItem(newItem);
             }
 
-            // Clear the input fields or navigate away
+
             editGroceryName.setText("");
             editGroceryNote.setText("");
             checkImportant.setChecked(false);
