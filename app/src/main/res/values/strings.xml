@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">GroceryActivity</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="all">All</string>
+    <string name="add">Add</string>
+    <string name="main">Main</string>
+    <string name="lis_tuote">Lisää tuote</string>
+    <string name="super_important">Super important</string>
+    <string name="tuotteen_nimi">Tuotteen nimi</string>
+    <string name="muistiinpano">Muistiinpano</string>
+</resources>
