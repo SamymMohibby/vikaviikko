@@ -32,7 +32,7 @@ public class BottomFragment extends Fragment {
             StringBuilder importantItemsBuilder = new StringBuilder();
             for (Grocery item : items) {
                 if (item.isImportant()) {
-                    importantItemsBuilder.append(item.getGrocery()).append(", ");
+                    importantItemsBuilder.append(item.getItemName()).append(", ");
                 }
             }
 

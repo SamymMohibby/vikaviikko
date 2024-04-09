@@ -1,7 +1,10 @@
 package com.example.groceryactivity;
 
+
+
 import android.os.Bundle;
 
+import androidx.arch.core.executor.ArchTaskExecutor;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
@@ -41,9 +44,11 @@ public class AddGroceryFragment extends Fragment {
         buttonAddGrocery = view.findViewById(R.id.buttonAddGrocery);
 
         buttonAddGrocery.setOnClickListener(v -> {
-            String name = editGroceryName.getText().toString().trim();
-            String note = editGroceryNote.getText().toString().trim();
+            String name = editGroceryName.getText().toString();
+            String note = editGroceryNote.getText().toString();
             boolean isImportant = checkImportant.isChecked();
+            Grocery grocery = new Grocery(name, note);
+            ListGrocery.getInstance().addGrocery(grocery);
 
             Grocery newItem = new Grocery(name, note);
             if (isImportant) {

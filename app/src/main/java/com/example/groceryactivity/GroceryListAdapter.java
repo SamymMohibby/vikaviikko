@@ -1,39 +1,46 @@
 package com.example.groceryactivity;
 
+import android.content.Context;
 import android.view.LayoutInflater;
-import android.view.View;
 import android.view.ViewGroup;
 
-import androidx.fragment.app.FragmentActivity;
+import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class GroceryListAdapter extends RecyclerView.Adapter<GroceryViewHolder> {
-    private List<Grocery> groceryList = new ArrayList<>();
 
-    public GroceryListAdapter(FragmentActivity activity, ArrayList<Grocery> groceries) {
-        groceryList = ListGrocery.getInstance().getGroceries();
+    private Context context;
+    private ArrayList<Grocery> groceries = new ArrayList<>();
+
+    public GroceryListAdapter () {
+
+    }
+
+    public GroceryListAdapter(Context context, ArrayList<Grocery> groceries) {
+        this.context = context;
+        this.groceries = groceries;
+    }
+
+
+
+    @NonNull
+    @Override
+    public GroceryViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        return new GroceryViewHolder(LayoutInflater.from(context).inflate(R.layout.item_grocery, parent, false));
     }
 
     @Override
-    public GroceryViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_grocery, parent, false);
-        return new GroceryViewHolder(view);
-    }
+    public void onBindViewHolder(@NonNull GroceryViewHolder holder, int position) {
+        holder.itemName.setText(groceries.get(position).getItemName());
+        holder.itemNote.setText(groceries.get(position).getItemNote());
 
-    @Override
-    public void onBindViewHolder(GroceryViewHolder holder, int position) {
-        Grocery grocery = groceryList.get(position);
-        holder.textGroceryName.setText(grocery.getGrocery());
-        holder.textGroceryNote.setText(grocery.getNote());
+
     }
 
     @Override
     public int getItemCount() {
-        return groceryList.size();
+        return groceries.size();
     }
-
-
 }

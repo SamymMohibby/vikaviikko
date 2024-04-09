@@ -6,11 +6,11 @@ package com.example.groceryactivity;
         import androidx.recyclerview.widget.RecyclerView;
 
 public class GroceryViewHolder extends RecyclerView.ViewHolder {
-    public TextView textGroceryName, textGroceryNote;
+    public TextView itemNote, itemName;
 
     public GroceryViewHolder(View itemView) {
         super(itemView);
-        textGroceryName = itemView.findViewById(R.id.textGroceryName);
-        textGroceryNote = itemView.findViewById(R.id.textGroceryNote);
+        itemName = itemView.findViewById(R.id.textGroceryName);
+        itemNote = itemView.findViewById(R.id.textGroceryNote);
     }
 }
