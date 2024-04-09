@@ -34,5 +34,4 @@ public class GroceryListAdapter extends RecyclerView.Adapter<GroceryViewHolder> 
         return groceryList.size();
     }
 
-    // Add any additional methods you might need to manipulate the list items
 }

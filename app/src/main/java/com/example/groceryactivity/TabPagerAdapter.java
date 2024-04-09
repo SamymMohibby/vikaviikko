@@ -27,14 +27,12 @@ public class TabPagerAdapter extends FragmentStateAdapter {
             case 0:
                 return new MainPageFragment();
             case 1:
-                return new ListGroceryFragment();
+                return new ListGroceryFragment(); // The test seems to expect this fragment at position 1
             case 2:
                 return new AddGroceryFragment();
             default:
-                return new MainPageFragment();
-
+                throw new IllegalStateException("Unexpected position: " + position);
         }
-
     }
 
     @Override

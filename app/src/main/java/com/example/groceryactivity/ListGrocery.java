@@ -21,25 +21,18 @@ public class ListGrocery {
         return instance;
     }
 
-    // Adds a new Grocery item to the list
+
     public void addGrocery(Grocery grocery) {
         groceryList.add(grocery);
     }
 
-    // Removes a Grocery item from the list
-    public void removeGrocery(Grocery grocery) {
-        groceryList.remove(grocery);
-    }
 
-    // Gets the list of Grocery items
     public List<Grocery> getGroceries() {
         return groceryList;
     }
 
 
-    // Existing code...
 
-    // Method to find a Grocery item by its ID
     public Grocery findGroceryById(String id) {
         for (Grocery grocery : groceryList) {
             if (grocery.getId().equals(id)) {
