@@ -3,46 +3,36 @@ package com.example.groceryactivity;
 import java.util.ArrayList;
 import java.util.List;
 
+import android.widget.EditText;
+
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+import java.util.List;
+
 public class ListGrocery {
 
-    private static ListGrocery instance = null;
-    private final List<Grocery> groceryList;
+    private ArrayList<Grocery> groceries = new ArrayList<>();
+    private static ListGrocery listGrocery = null;
 
-    // Private constructor to prevent instantiation
     private ListGrocery() {
-        groceryList = new ArrayList<>();
+
     }
 
-    // Public method to get the single instance of the class
     public static ListGrocery getInstance() {
-        if (instance == null) {
-            instance = new ListGrocery();
-        }
-        return instance;
-    }
+        if (listGrocery == null) {
+            listGrocery = new ListGrocery();
 
+        }
+        return listGrocery;
+    }
 
     public void addGrocery(Grocery grocery) {
-        groceryList.add(grocery);
+        groceries.add(grocery);
     }
 
-
-    public List<Grocery> getGroceries() {
-        return groceryList;
+    public ArrayList<Grocery> getGroceries() {
+        return groceries;
     }
-
-
-
-    public Grocery findGroceryById(String id) {
-        for (Grocery grocery : groceryList) {
-            if (grocery.getId().equals(id)) {
-                return grocery;
-            }
-        }
-        return null; // Return null if the Grocery item isn't found
-    }
-
-
 }
 
 

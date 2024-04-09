@@ -17,6 +17,7 @@ import com.example.groceryactivity.R;
 public class ListGroceryFragment extends Fragment {
     private RecyclerView rvGroceries;
     private GroceryListAdapter adapter;
+    private ListGrocery storageGrocery;
     public ListGroceryFragment() {
     }
 
@@ -34,9 +35,21 @@ public class ListGroceryFragment extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_list_grocery, container, false);
         rvGroceries = view.findViewById(R.id.rvGroceries);
-        adapter = new GroceryListAdapter(); // Use the adapter field
+        adapter = new GroceryListAdapter(getActivity(), storageGrocery.getInstance().getGroceries());
+        // muista käytä getactivity getcontext sijaksi
         rvGroceries.setLayoutManager(new LinearLayoutManager(getActivity()));
-        rvGroceries.setAdapter(adapter); // Set it once
+        rvGroceries.setAdapter(adapter);
+
         return view;
     }
+
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        adapter.notifyDataSetChanged();
+
+        // Inflate the layout for this fragment
+
     }
+}

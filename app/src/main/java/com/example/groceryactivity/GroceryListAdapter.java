@@ -4,6 +4,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import androidx.fragment.app.FragmentActivity;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
@@ -12,7 +13,7 @@ import java.util.List;
 public class GroceryListAdapter extends RecyclerView.Adapter<GroceryViewHolder> {
     private List<Grocery> groceryList = new ArrayList<>();
 
-    public GroceryListAdapter() {
+    public GroceryListAdapter(FragmentActivity activity, ArrayList<Grocery> groceries) {
         groceryList = ListGrocery.getInstance().getGroceries();
     }
 
@@ -33,5 +34,6 @@ public class GroceryListAdapter extends RecyclerView.Adapter<GroceryViewHolder> 
     public int getItemCount() {
         return groceryList.size();
     }
+
 
 }
