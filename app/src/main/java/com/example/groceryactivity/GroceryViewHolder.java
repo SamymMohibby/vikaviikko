@@ -1,13 +1,12 @@
 package com.example.groceryactivity;
 
-import android.view.View;
-import android.widget.TextView;
+        import android.view.View;
+        import android.widget.TextView;
 
-import androidx.recyclerview.widget.RecyclerView;
+        import androidx.recyclerview.widget.RecyclerView;
 
 public class GroceryViewHolder extends RecyclerView.ViewHolder {
-    public TextView textGroceryName;
-    public TextView textGroceryNote;
+    public TextView textGroceryName, textGroceryNote;
 
     public GroceryViewHolder(View itemView) {
         super(itemView);

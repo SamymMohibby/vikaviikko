@@ -35,7 +35,7 @@ public class ListGroceryFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_list_grocery, container, false);
         rvGroceries = view.findViewById(R.id.rvGroceries);
         adapter = new GroceryListAdapter(); // Use the adapter field
-        rvGroceries.setLayoutManager(new LinearLayoutManager(getContext()));
+        rvGroceries.setLayoutManager(new LinearLayoutManager(getActivity()));
         rvGroceries.setAdapter(adapter); // Set it once
         return view;
     }

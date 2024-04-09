@@ -21,11 +21,6 @@ public class AddGroceryFragment extends Fragment {
     private CheckBox checkImportant;
     private Button buttonAddGrocery;
 
-    public AddGroceryFragment() {
-
-    }
-
-
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
