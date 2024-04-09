@@ -16,7 +16,7 @@ public class SharedViewModel extends ViewModel {
         if (currentItems == null) {
             currentItems = new ArrayList<>();
         }
-        currentItems.add(item); // No need to check if isImportant here, as this is checked before adding
+        currentItems.add(item);
         importantItems.setValue(currentItems);
     }
 

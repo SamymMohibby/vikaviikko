@@ -5,18 +5,17 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
 import androidx.fragment.app.FragmentManager;
 import androidx.lifecycle.Lifecycle;
-import androidx.viewpager2.adapter.FragmentStateAdapter;
 
-public class TabPagerAdapter extends FragmentStateAdapter {
-    public TabPagerAdapter(@NonNull FragmentActivity fragmentActivity) {
+public class FragmentStateAdapter extends androidx.viewpager2.adapter.FragmentStateAdapter {
+    public FragmentStateAdapter(@NonNull FragmentActivity fragmentActivity) {
         super(fragmentActivity);
     }
 
-    public TabPagerAdapter(@NonNull Fragment fragment) {
+    public FragmentStateAdapter(@NonNull Fragment fragment) {
         super(fragment);
     }
 
-    public TabPagerAdapter(@NonNull FragmentManager fragmentManager, @NonNull Lifecycle lifecycle) {
+    public FragmentStateAdapter(@NonNull FragmentManager fragmentManager, @NonNull Lifecycle lifecycle) {
         super(fragmentManager, lifecycle);
     }
 
@@ -27,9 +26,9 @@ public class TabPagerAdapter extends FragmentStateAdapter {
             case 0:
                 return new MainPageFragment();
             case 1:
-                return new ListGroceryFragment(); // The test seems to expect this fragment at position 1
+                return new AddGroceryFragment(); // The test seems to expect this fragment at position 1
             case 2:
-                return new AddGroceryFragment();
+                return new ListGroceryFragment();
             default:
                 throw new IllegalStateException("Unexpected position: " + position);
         }

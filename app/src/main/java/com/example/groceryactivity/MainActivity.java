@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
         ViewPager2 viewPager2 = findViewById(R.id.viewArea);
         FrameLayout frameLayout = findViewById(R.id.frameBottom);
 
-        TabPagerAdapter adapter = new TabPagerAdapter(this);
+        FragmentStateAdapter adapter = new FragmentStateAdapter(this);
         viewPager2.setAdapter(adapter);
 
         new TabLayoutMediator(tabLayout, viewPager2, (tab, position) -> {

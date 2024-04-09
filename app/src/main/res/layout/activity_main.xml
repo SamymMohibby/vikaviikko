@@ -16,16 +16,18 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/main"/>
-        <com.google.android.material.tabs.TabItem
-            android:id="@+id/tabAll"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/all"/>
+
         <com.google.android.material.tabs.TabItem
             android:id="@+id/tabAdd"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/add"/>
+            android:text="@string/add" />
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/tabAll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/all" />
     </com.google.android.material.tabs.TabLayout>
 
     <androidx.viewpager2.widget.ViewPager2
