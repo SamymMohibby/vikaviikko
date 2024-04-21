@@ -30,10 +30,10 @@ public class MainActivity extends AppCompatActivity {
                     tab.setText(R.string.main);
                     break;
                 case 1:
-                    tab.setText(R.string.all);
+                    tab.setText(R.string.add);
                     break;
                 case 2:
-                    tab.setText(R.string.add);
+                    tab.setText(R.string.all);
                     break;
             }
         }).attach();

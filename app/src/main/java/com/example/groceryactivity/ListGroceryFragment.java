@@ -36,7 +36,6 @@ public class ListGroceryFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_list_grocery, container, false);
         rvGroceries = view.findViewById(R.id.rvGroceries);
         adapter = new GroceryListAdapter(getActivity(), storageGrocery.getInstance().getGroceries());
-        // muista käytä getactivity getcontext sijaksi
         rvGroceries.setLayoutManager(new LinearLayoutManager(getActivity()));
         rvGroceries.setAdapter(adapter);
 
@@ -48,8 +47,6 @@ public class ListGroceryFragment extends Fragment {
     public void onResume() {
         super.onResume();
         adapter.notifyDataSetChanged();
-
-        // Inflate the layout for this fragment
 
     }
 }

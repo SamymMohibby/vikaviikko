@@ -5,15 +5,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
 
+
 public class BottomFragment extends Fragment {
-    private TextView textImportant;
-
-
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -44,4 +41,5 @@ public class BottomFragment extends Fragment {
         });
 
         return view;
-    }}
+    }
+}

@@ -9,4 +9,7 @@
     <string name="super_important">Super important</string>
     <string name="tuotteen_nimi">Tuotteen nimi</string>
     <string name="muistiinpano">Muistiinpano</string>
+    <string name="addFr">Add\n</string>
+    <string name="allFr">All</string>
+    <string name="mainfr">Main</string>
 </resources>

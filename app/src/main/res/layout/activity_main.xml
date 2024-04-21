@@ -15,19 +15,19 @@
             android:id="@+id/tabMain"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Main"/>
+            android:text="@string/mainfr"/>
 
         <com.google.android.material.tabs.TabItem
             android:id="@+id/tabAdd"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Add" />
+            android:text="@string/addFr" />
 
         <com.google.android.material.tabs.TabItem
             android:id="@+id/tabAll"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Add" />
+            android:text="@string/allFr" />
     </com.google.android.material.tabs.TabLayout>
 
     <androidx.viewpager2.widget.ViewPager2
